@@ -2,5 +2,10 @@
 @import "bitters/base";
 @import "neat/neat";
 
-@import "welcome/welcome";
+// Application defaults & variables
+@import "application";
 @import "includes/header";
+
+// Page specific styles
+@import "welcome/welcome";
+@import "posts/posts";

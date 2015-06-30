@@ -1,7 +1,11 @@
 <template name="postItem">
-  <div class="post__item--container">
-    <div class="post__content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+  <div class="comment">
+    <div class="comment-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="Logo image">
+    </div>
+    <div class="comment-content">
+      <h1><a href="{{url}}">{{title}}</a><span class="domain__span">{{domain}}</span></h1>
+      <p class="comment-detail"><a href="{{pathFor "postPage"}}">Discuss</a></p>
     </div>
   </div>
 </template>
