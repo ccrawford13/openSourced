@@ -1,2 +1,6 @@
-@import "vendor/settings";
-@import ".meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/foundation";
+@import "bourbon/bourbon";
+@import "bitters/base";
+@import "neat/neat";
+
+@import "welcome/welcome";
+@import "includes/header";
