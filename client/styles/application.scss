@@ -2,7 +2,12 @@
 
 html, body {
   width: 100%;
+  height: 100%;
   margin: 0;
+}
+
+.body__container--outer, .body__container--inner {
+  height: 100%;
 }
 
 // Variables -- Override Bourbon defaults
