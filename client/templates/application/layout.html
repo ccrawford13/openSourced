@@ -1,13 +1,12 @@
-<head>
-  <title>OpenSourced</title>
-</head>
-<body>
+<template name="layout">
   <div class="body__container--outer">
     <header>
       <!-- Add bourbon nav -->
+      {{> navigation}}
     </header>
     <div class="body__container--inner">
-      {{> postsList}}
+      {{> yield}}
     </div>
   </div>
-</body>
+  {{initFoundation}}
+</template>

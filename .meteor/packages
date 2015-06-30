@@ -6,8 +6,6 @@
 
 meteor-platform
 insecure
-fourseven:scss
-wolves:bourbon
-wolves:bitters
-wolves:neat
 underscore
+iron:router
+matthew:foundation5-sass
