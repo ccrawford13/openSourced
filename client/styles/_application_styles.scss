@@ -1,0 +1,14 @@
+// Variables -- Override Bourbon defaults
+$primary-color: #258de2;
+$secondary-color: #e9971c;
+
+// Application Wide Settings
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.body__container--outer, .body__container--inner {
+  height: 100%;
+}

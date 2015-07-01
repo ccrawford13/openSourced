@@ -3,9 +3,11 @@
 @import "neat/neat";
 
 // Application defaults & variables
-@import "application";
+@import "application_styles";
+@import "extend_variables";
 @import "includes/header";
 @import "includes/not_found";
+@import "includes/access_denied";
 
 // Element specific styles
 @import "includes/form";
