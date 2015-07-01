@@ -7,6 +7,9 @@
 @import "includes/header";
 @import "includes/not_found";
 
+// Element specific styles
+@import "includes/form";
+
 // Page specific styles
 @import "welcome/welcome";
 @import "posts/posts";

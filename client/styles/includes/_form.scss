@@ -1,0 +1,11 @@
+.post__form--container {
+  @extend .posts__container;
+
+  .form__submit {
+    background-color: $primary-color;
+
+    &:hover{
+      background-color: darken($primary-color, 10);
+    }
+  }
+}
