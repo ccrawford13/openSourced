@@ -11,5 +11,14 @@ html, body {
 }
 
 // Variables -- Override Bourbon defaults
+$primary-color: #258de2;
+$secondary-color: #e9971c;
 
-$primary-color: #11bf08;
+%button {
+  @extend button;
+  background-color: $secondary-color;
+
+  &:hover{
+    background-color: darken($secondary-color, 10);
+  }
+}

@@ -3,9 +3,13 @@
   padding: 3em;
 }
 
-// postPage styles
-
-
+.button__container {
+  padding-top: 2em;
+  padding-left: 3em;
+  .button__create--post {
+    @extend %button;
+  }
+}
 
 // postItem styles
 .comment {
@@ -85,7 +89,7 @@
       font-style: italic;
 
       a {
-        color: $primary-color;
+        color: $secondary-color;
 
         &:hover {
           text-decoration: underline;
