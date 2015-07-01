@@ -1,7 +1,9 @@
 <template name="postsList">
-  <!-- <button class="post__new-button">  -->
-    <a href="{{pathFor "postSubmit"}}">New Post</a>
-  <!-- </button> -->
+  {{#if currentUser}}
+    <div class="button__container">
+      <a href="{{pathFor "postSubmit"}}" class="button__create--post">New Post</a>
+    </div>
+  {{/if}}
   <div class="posts__container">
     {{#each posts}}
       {{> postItem}}
