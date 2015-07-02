@@ -10,6 +10,8 @@ Template.postEdit.events({
       description: $(e.target).find('[name=description]').val()
     }
 
+    // Refactor to method call to
+    // validate format, length, && uniqueness
     Posts.update(currentPostId, {
       $set: postProperties
     }, function(error) {
