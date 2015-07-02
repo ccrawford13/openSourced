@@ -5,7 +5,17 @@
     </div>
     <div class="comment-content">
       <h1><a href="{{url}}">{{title}}</a><span class="domain__span">{{domain}}</span></h1>
-      <p class="comment-detail"><a href="{{pathFor "postPage"}}">Discuss</a></p>
+      <p class="comment-detail">
+        Submitted by: {{author}}
+      </p>
     </div>
+      {{#if ownPost}}
+        <div class="comment-link__container">
+          <a class="comment-link" href="{{pathFor "postEdit"}}">Edit Post</a>
+        </div>
+      {{/if}}
+      <div class="comment-link__container">
+        <a class="comment-link" href="{{pathFor "postPage"}}">Discuss</a>
+      </div>
   </div>
 </template>

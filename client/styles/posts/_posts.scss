@@ -39,6 +39,7 @@
   }
 
   .comment-image {
+    width: 5%;
     padding-right: $comment-gutter;
 
     > img {
@@ -58,8 +59,7 @@
   }
 
   .comment-content {
-    width: 100%;
-
+    width: 60%;
     h1 {
       font-size: 1em;
       margin: 0 0 0.5em 0;
@@ -83,17 +83,20 @@
       margin-bottom: 0.5em;
     }
 
-    p.comment-detail {
+    .comment-detail {
       color: $comment-detail-color;
       font-size: 0.9em;
       font-style: italic;
+      }
+    }
 
-      a {
-        color: $secondary-color;
+  .comment-link__container {
+    width: 40%;
+    .comment-link {
+      color: $secondary-color;
 
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
