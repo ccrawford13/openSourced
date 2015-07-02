@@ -1,17 +1,20 @@
 <template name="postSubmit">
   <div class="post__form--container">
     <form class="post__form">
-      <div class="post__form--group">
+      <div class="post__form--group {{errorClass 'url'}}">
         <label class="form__label" for="url">URL</label>
         <input name="url" id="url" type="text" value="" placeholder="URL" class="form__input"/>
+        <span class="post__form--help">{{errorMessage 'url'}}</span>
       </div>
-      <div class="post__form--group">
+      <div class="post__form--group {{errorClass 'title'}}">
         <label class="form__label" for="title">Title</label>
         <input name="title" id="title" type="text" value="" placeholder="What's your project called" class="form__input"/>
+        <span class="post__form--help">{{errorMessage 'title'}}</span>
       </div>
-      <div class="post__form--group">
+      <div class="post__form--group {{errorClass 'description'}}">
         <label class="form__label" for="description">Description</label>
         <input name="description" id="description" type="text" value="" placeholder="Describe your project" class="form__input"/>
+        <span class="post__form--help">{{errorMessage 'description'}}</span>
       </div>
       <input type="submit" value="Submit" class="form__submit"/>
     </form>
