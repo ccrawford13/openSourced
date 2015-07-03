@@ -1,108 +1,72 @@
-// postList styles
-.posts__container {
-  padding: 3em;
+.post__list--container {
+  @include outer-container;
 }
 
+// New post button
 .button__container {
-  padding-top: 2em;
-  padding-left: 3em;
+  @include span-columns(12);
+  @include shift(4.6);
+  padding: 0 0 2em;
   .button__create--post {
     @extend %button;
+    width: 20%;
+    text-align: center;
   }
 }
 
-// postItem styles
-.comment {
-  $base-border-radius: 3px !default;
+// Post styles
+.post__container {
+  $title-size: 1.25em;
   $base-spacing: 1.5em !default;
   $action-color: $primary-color;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
-  $comment-gutter: 1.4em;
-  $comment-image-padding: 0.7em;
-  $comment-image-width: 4em;
-  $comment-color: $base-font-color;
-  $comment-background: lighten($action-color, 15%);
-  $comment-detail-color: transparentize($comment-color, 0.5);
-  $comment-image-vert-alignment: top;
-
-  border-bottom: 1px solid transparentize($comment-color, 0.9);
-  display: table;
-  margin-bottom: $base-spacing;
-  padding-bottom: 1em;
-  width: 100%;
-
-  .comment-image,
-  .comment-content {
-    display: table-cell;
-    vertical-align: $comment-image-vert-alignment;
-  }
-
-  .comment-image {
-    width: 5%;
-    padding-right: $comment-gutter;
-
-    > img {
-      background: $comment-background;
-      border-radius: $base-border-radius;
-      display: block;
-      height: auto;
-      max-width: none;
-      padding: $comment-image-padding;
-      width: $comment-image-width;
-    }
-
-    .comment-reverse-order & {
-      padding-right: 0;
-      padding-left: 10px;
-    }
-  }
-
-  .comment-content {
-    width: 60%;
-
-    h1 {
-      font-size: 1em;
-      margin: 0 0 0.5em 0;
-
+  $post-color: $base-font-color;
+  $subtext-color: transparentize($post-color, .25);
+  @include margin(3em 0 0 3em);
+  border-bottom: 1px solid transparentize($post-color, 0.8);
+  @include outer-container;
+  .post__text--container {
+    @include span-columns(9);
+    #post__title {
+      font-size: $title-size;
       a {
-        color: $base-font-color;
-
+        text-decoration: none;
+        color: $action-color;
         &:hover {
           text-decoration: underline;
         }
       }
-
-      .domain__span {
-        padding-left: .5em;
-        color: transparentize($base-font-color, 0.3);
+      .post__domain {
+        font-size: 0.75em;
+        padding-left: 0.5em;
+        color: $subtext-color;
       }
     }
-
-    p {
-      line-height: 1.5em;
-      margin-bottom: 0.5em;
+    .post__description {
+      margin-left: $base-spacing;
+      @include span-columns(9 of 9);
+      p {
+        font-size: 0.9em;
+        color: $subtext-color;
+      }
     }
-
-    .comment-detail {
-      color: $comment-detail-color;
-      font-size: 0.8em;
-      font-style: italic;
-    }
-
-    .description {
-      color: $base-font-color;
-      font-size: 0.8em;
+    .post__author--details {
+      @include span-columns(9 of 9);
+      p {
+        font-size: 0.75em;
+        font-style: italic;
+        color: $subtext-color;
+      }
     }
   }
-
-  .comment-link__container {
-    width: 40%;
-    .comment-link {
-      color: $secondary-color;
-
-      &:hover {
-        text-decoration: underline;
+  .post__link--container {
+    @include span-columns(3);
+    .post__link--link {
+      float: right;
+      text-align: center;
+      a {
+        @extend %button;
+        margin-top: 0.5em;
+        padding-bottom: 0.5em;
       }
     }
   }

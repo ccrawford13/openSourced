@@ -1,22 +1,30 @@
 <template name="postItem">
-  <div class="comment">
-    <div class="comment-image">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="Logo image">
-    </div>
-    <div class="comment-content">
-      <h1><a href="{{url}}">{{title}}</a><span class="domain__span">{{domain}}</span></h1>
-      <p class="description">{{description}}</p>
-      <p class="comment-detail">
-        Submitted by: {{author}}
-      </p>
-    </div>
-      {{#if ownPost}}
-        <div class="comment-link__container">
-          <a class="comment-link" href="{{pathFor "postEdit"}}">Edit Post</a>
-        </div>
-      {{/if}}
-      <div class="comment-link__container">
-        <a class="comment-link" href="{{pathFor "postPage"}}">Discuss</a>
+  <div class="post__container">
+    <div class="post__text--container">
+      <h1 id="post__title">
+        <a href="{{url}}">{{title}}</a>
+        <span class="post__domain">{{domain}}</span>
+      </h1>
+      <div class="post__description">
+        <p>
+          {{description}}
+        </p>
       </div>
+      <div class="post__author--details">
+        <p>Submitted by: {{author}}</p>
+      </div>
+    </div>
+    <div class="post__link--container">
+      <ul class="post__link--link">
+        <li>
+          <a href="{{pathFor "postPage"}}">Discuss</a>
+        </li>
+        {{#if ownPost}}
+        <li>
+          <a href="{{pathFor "postEdit"}}">Edit Post</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
   </div>
 </template>
