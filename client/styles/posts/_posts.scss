@@ -60,6 +60,7 @@
 
   .comment-content {
     width: 60%;
+
     h1 {
       font-size: 1em;
       margin: 0 0 0.5em 0;
@@ -85,10 +86,15 @@
 
     .comment-detail {
       color: $comment-detail-color;
-      font-size: 0.9em;
+      font-size: 0.8em;
       font-style: italic;
-      }
     }
+
+    .description {
+      color: $base-font-color;
+      font-size: 0.8em;
+    }
+  }
 
   .comment-link__container {
     width: 40%;
