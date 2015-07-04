@@ -1,11 +1,6 @@
 .post__form--container {
   @include outer-container;
   @include vertically-centered;
-
-
-  .form__submit {
-    @extend %button;
-  }
 }
 
 fieldset {
@@ -33,6 +28,10 @@ label {
   abbr {
     display: none;
   }
+}
+
+input.form__submit {
+  @include button;
 }
 
 #{$all-text-inputs},

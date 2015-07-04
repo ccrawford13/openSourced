@@ -57,6 +57,9 @@
         font-weight: bold;
         color: $subtext-color;
       }
+      a {
+        color: $secondary-color;
+      }
     }
   }
   .post__link--container {
