@@ -4,14 +4,20 @@
 
 // Application defaults & variables
 @import "application_styles";
-@import "extend_variables";
-@import "includes/header";
+@import "variables";
+
+// Mixins
+@import "mixins";
+
+// Components
+@import "components/header";
+@import "components/form";
+@import "components/buttons";
+
+// Templates
 @import "includes/not_found";
 @import "includes/access_denied";
 
-// Element specific styles
-@import "includes/form";
-
-// Page specific styles
+// Pages
 @import "welcome/welcome";
 @import "posts/posts";

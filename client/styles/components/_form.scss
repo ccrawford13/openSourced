@@ -1,5 +1,7 @@
 .post__form--container {
-  @extend .posts__container;
+  @include outer-container;
+  @include vertically-centered;
+
 
   .form__submit {
     @extend %button;
