@@ -1,0 +1,22 @@
+.comment__list--container {
+  @include outer-container;
+}
+.comment__container {
+  $subtext-color: transparentize($base-font-color, .25);
+  @include margin(1em 0 0 3em);
+  @include outer-container;
+  border-bottom: 1px solid transparentize($base-font-color, .8);
+  .comment__author--details {
+    font-size: .75em;
+    color: $subtext-color;
+    font-style: italic;
+    .comment__author {
+      font-weight: bold;
+    }
+  }
+
+  .comment__body {
+    padding-left: 1.25em;
+    font-size: .8em;
+  }
+}

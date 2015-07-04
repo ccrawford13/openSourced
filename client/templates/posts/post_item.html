@@ -11,7 +11,9 @@
         </p>
       </div>
       <div class="post__author--details">
-        <p>Submitted by: {{author}}</p>
+        <p>Submitted by: {{author}} - 
+          <a href="{{pathFor 'postPage'}}"> {{commentsCount}} Comments</a>
+        </p>
       </div>
     </div>
     <div class="post__link--container">

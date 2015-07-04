@@ -45,7 +45,7 @@
       margin-left: $base-spacing;
       @include span-columns(9 of 9);
       p {
-        font-size: 0.9em;
+        font-size: 1.25em;
         color: $subtext-color;
       }
     }
@@ -54,6 +54,7 @@
       p {
         font-size: 0.75em;
         font-style: italic;
+        font-weight: bold;
         color: $subtext-color;
       }
     }

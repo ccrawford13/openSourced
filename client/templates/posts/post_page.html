@@ -3,5 +3,10 @@
     <div class="item__container">
       {{> postItem}}
     </div>
+    <div class="comment__list--container">
+      {{#each comments}}
+        {{> commentItem}}
+      {{/each}}
+    </div>
   </div>
 </template>
