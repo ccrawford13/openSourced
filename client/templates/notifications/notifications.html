@@ -1,0 +1,25 @@
+<template name="notifications">
+  <a href="#">Notifications</a>
+  {{#if notificationCount}}
+    <span class="notification__count">{{notificationCount}}</span>
+  {{/if}}
+  <ul class="submenu">
+    {{#if notificationCount}}
+      {{#each notifications}}
+        {{> notificationItem}}
+      {{/each}}
+    {{else}}
+      <li>
+        <a href="#"><span>No Notifications</span></a>
+      </li>
+    {{/if}}
+  </ul>
+</template>
+
+<template name="notificationItem">
+  <li>
+    <a href="#">{{notificationPostPath}}
+      <strong>{{commenterName}}</strong> commented on your post
+    </a>
+  </li>
+</template>
