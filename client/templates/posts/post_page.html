@@ -7,6 +7,13 @@
       {{#each comments}}
         {{> commentItem}}
       {{/each}}
+      {{#if currentUser}}
+        {{> commentSubmit}}
+      {{else}}
+        <p class="comment_login--notice">
+          Please log in to leave a comment
+        </p>
+      {{/if}}
     </div>
   </div>
 </template>
