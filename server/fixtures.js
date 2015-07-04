@@ -26,7 +26,8 @@ if (Posts.find().count() === 0) {
     author: sacha.profile.name,
     url: 'http://sachagreif.com/introducing-telescope/',
     description: 'Super responsive social platform',
-    submitted: new Date(now - 7 * 3600 * 1000)
+    submitted: new Date(now - 7 * 3600 * 1000),
+    commentsCount: 2
   });
 
   var meteorId = Posts.insert({
@@ -35,7 +36,8 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://meteor.com',
     description: 'Awesome full-stack Javscript App platform',
-    submitted: new Date(now - 10 * 3600 * 1000)
+    submitted: new Date(now - 10 * 3600 * 1000),
+    commentsCount: 1
   });
 
   var meteorBookId = Posts.insert({
@@ -44,7 +46,8 @@ if (Posts.find().count() === 0) {
     author: tom.profile.name,
     url: 'http://themeteorbook.com',
     description: 'Great way to learn to build apps with Meteor',
-    submitted: new Date(now - 12 * 3600 * 1000)
+    submitted: new Date(now - 12 * 3600 * 1000),
+    commentsCount: 0
   });
 
   Comments.insert({
