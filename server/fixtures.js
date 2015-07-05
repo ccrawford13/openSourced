@@ -18,6 +18,18 @@ if (Posts.find().count() === 0) {
   });
   var sacha = Meteor.users.findOne(sachaId);
 
+  for (var i = 1; i <= 10; i++) {
+    Posts.insert({
+      title: 'Test Post #' + i,
+      userId: tom._id,
+      author: tom.profile.name,
+      url: 'http://google.com/?q=test-' + i,
+      description: (10 - i) + ': Test posts remaining',
+      submitted: new Date(now - i * 3600 * 1000),
+      commentsCount: 0
+    });
+  }
+
   // Set post name(nameId) eql to insert function
   // to reference in comment creation
   var telescopeId = Posts.insert({
