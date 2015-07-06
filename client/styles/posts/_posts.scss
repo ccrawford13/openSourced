@@ -1,5 +1,17 @@
 .post__list--container {
   @include outer-container;
+  .load-more__container {
+    margin: .5em;
+    width: 100%;
+    text-align: center;
+    background-color: $light-gray;
+    border-radius: 10px;
+    .load-more__button {
+      font-size: 1.5em;
+      color: $secondary-color;
+    }
+  }
+
 }
 
 // New post button

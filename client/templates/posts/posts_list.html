@@ -8,5 +8,10 @@
     {{#each posts}}
       {{> postItem}}
     {{/each}}
+    {{#if nextPath}}
+      <div class="load-more__container">
+        <a class="load-more__button" href="{{nextPath}}">Load More</a>
+      </div>
+    {{/if}}
   </div>
 </template>
