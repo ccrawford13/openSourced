@@ -12,6 +12,10 @@
       <div class="load-more__container">
         <a class="load-more__button" href="{{nextPath}}">Load More</a>
       </div>
+    {{else}}
+      {{#unless ready}}
+        {{> spinner}}
+      {{/unless}}
     {{/if}}
   </div>
 </template>
