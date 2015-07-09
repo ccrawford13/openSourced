@@ -22,7 +22,9 @@
   @extend button;
   background-color: $secondary-color;
 
-  &:hover{
+  &:hover,
+  &:focus {
     background-color: darken($secondary-color, 10);
+    outline-color: $primary-color;
   }
 }
