@@ -26,7 +26,9 @@ if (Posts.find().count() === 0) {
       url: 'http://google.com/?q=test-' + i,
       description: (10 - i) + ': Test posts remaining',
       submitted: new Date(now - i * 3600 * 1000),
-      commentsCount: 0
+      commentsCount: 0,
+      upvoters: [],
+      votes: 0
     });
   }
 
@@ -39,7 +41,9 @@ if (Posts.find().count() === 0) {
     url: 'http://sachagreif.com/introducing-telescope/',
     description: 'Super responsive social platform',
     submitted: new Date(now - 7 * 3600 * 1000),
-    commentsCount: 2
+    commentsCount: 2,
+    upvoters: [],
+    votes: 0
   });
 
   var meteorId = Posts.insert({
@@ -49,7 +53,9 @@ if (Posts.find().count() === 0) {
     url: 'http://meteor.com',
     description: 'Awesome full-stack Javscript App platform',
     submitted: new Date(now - 10 * 3600 * 1000),
-    commentsCount: 1
+    commentsCount: 1,
+    upvoters: [],
+    votes: 0
   });
 
   var meteorBookId = Posts.insert({
@@ -59,7 +65,9 @@ if (Posts.find().count() === 0) {
     url: 'http://themeteorbook.com',
     description: 'Great way to learn to build apps with Meteor',
     submitted: new Date(now - 12 * 3600 * 1000),
-    commentsCount: 0
+    commentsCount: 0,
+    upvoters: [],
+    votes: 0
   });
 
   Comments.insert({
