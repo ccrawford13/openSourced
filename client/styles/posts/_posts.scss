@@ -84,6 +84,13 @@
         margin-top: 0.5em;
         padding-bottom: 0.5em;
       }
+      .post__upvote--disabled {
+        background-color: $medium-gray;
+        &:hover,
+        &:focus {
+          background-color: $medium-gray;
+        }
+      }
     }
   }
 }

@@ -6,6 +6,14 @@ Template.postItem.helpers({
     var a = document.createElement('a');
     a.href = this.url;
     return a.hostname;
+  },
+  upvotedClass: function() {
+    var userId = Meteor.userId();
+    if (userId && !_.include(this.upvoters, userId)) {
+      return 'post__upvote';
+    } else {
+      return 'post__upvote--disabled';
+    }
   }
 });
 
