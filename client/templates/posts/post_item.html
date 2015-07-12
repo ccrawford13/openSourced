@@ -12,8 +12,8 @@
       </div>
       <div class="post__author--details">
         <p>Submitted by: {{author}} -
-          <a href="{{pathFor 'postPage'}}"> {{commentsCount}} Comments </a>
-          | {{votes}} Votes
+          <a href="{{pathFor 'postPage'}}"> {{pluralize commentsCount "Comment"}} </a>
+          | {{pluralize votes "Vote"}}
         </p>
       </div>
     </div>
