@@ -7,8 +7,8 @@
       <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
       <nav role="navigation">
         <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-          <li class="nav-link"><a href="{{pathFor 'bestPosts'}}">Top Posts</a></li>
-          <li class="nav-link"><a href="{{pathFor 'newPosts'}}">Newest Posts</a></li>
+          <li class="nav-link"><a href="{{pathFor 'bestPosts'}}" class=" {{activeRouteClass 'bestPosts'}}">Top Posts</a></li>
+          <li class="nav-link"><a href="{{pathFor 'newPosts'}}" class="{{activeRouteClass 'newPosts' 'home'}}">Newest Posts</a></li>
           <li class="nav-link logo">
             <a href="{{pathFor "welcome"}}" class="logo">
               <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="Logo image">
