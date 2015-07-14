@@ -5,6 +5,14 @@ body {
   height: 100%;
   margin: 0;
 }
+.body__container--inner {
+  position: relative;
+}
+.page {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
 .body__container--outer,
 .body__container--inner {
   height: 100%;
