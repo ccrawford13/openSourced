@@ -5,9 +5,11 @@
         <a href="{{pathFor "postSubmit"}}" class="button__create--post">New Post</a>
       </div>
     {{/if}}
-    {{#each posts}}
-      {{> postItem}}
-    {{/each}}
+    <div class="post__wrapper">
+      {{#each posts}}
+        {{> postItem}}
+      {{/each}}
+    </div>
     {{#if nextPath}}
       <div class="load-more__container">
         <a class="load-more__button" href="{{nextPath}}">Load More</a>

@@ -33,9 +33,13 @@
   $action-color: $primary-color;
   $post-color: $base-font-color;
   $subtext-color: transparentize($post-color, .25);
+  position: relative;
   @include margin(3em 0 0 3em);
   border-bottom: 1px solid transparentize($post-color, 0.8);
   @include outer-container;
+  &.animate {
+    transition:all 300ms 0ms ease-in;
+  }
   .post__text--container {
     @include span-columns(9);
     #post__title {
